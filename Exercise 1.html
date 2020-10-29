@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<p>
+<h2><cenrter>Calculator</cenrter></h2>
+
+<input type="number" id="myResult">
+<input type="number" id="myResult2">
+<p>
+<button onclick="makeSomechanges(this.innerHTML)">Addition(+)</button>
+<button onclick="makeSomechanges(this.innerHTML)">Subtraction(-)</button>
+<button onclick="makeSomechanges(this.innerHTML)">Multiplication(*)</button>
+<button onclick="makeSomechanges(this.innerHTML)">Division(/)</button></p>
+<p id="myResult3"></p>
+
+<script>
+    function makeSomechanges(sign) {
+        let val;
+        let myResult=parseInt(document.getElementById('myResult').value);
+        let myResult2=parseInt(document.getElementById('myResult2').value);
+
+        if (sign.includes('+')) {
+            val = myResult + myResult2;
+        } else if (sign.includes('-')) {
+            val = myResult - myResult2;
+        } else if (sign.includes('*')) {
+            val = myResult * myResult2;
+        } else if (sign.includes('/')) {
+            val = myResult / myResult2;
+        }
+        document.getElementById('myResult3').innerHTML= val;
+    }
+</script>
+
+
+</body>
+</html>
